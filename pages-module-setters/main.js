@@ -1,3 +1,11 @@
+import Main from "../../lt-lands-modules/Main/Main"
+import Numbers from "../../lt-lands-modules/Main/Numbers"
+import Equipment from "../../lt-lands-modules/Main/Equipment"
+import Video from "../../lt-lands-modules/Main/Video"
+import WhyUs from "../../lt-lands-modules/Main/WhyUs"
+import Developments from "../../lt-lands-modules/Main/Developments"
+import Support from "../../lt-lands-modules/Main/Support"
+
 export function setMainModule(moduleName, data) {
   switch (moduleName) {
     case "Main": return (
@@ -53,18 +61,16 @@ export function setMainModule(moduleName, data) {
       />
     )
     case "WhyUs": return (
-      <div className={style.grey}>
-        <WhyUs
-          title={data.title}
-          firstCellTitle={data.firstCellTitle}
-          firstCellText={data.firstCellText}
-          secondCellTitle={data.secondCellTitle}
-          secondCellText={data.secondCellText}
-          thirdCellTitle={data.thirdCellTitle}
-          thirdCellText={data.thirdCellText}
-          sliderData={data.sliderData}
-        />
-      </div>
+      <WhyUs
+        title={data.title}
+        firstCellTitle={data.firstCellTitle}
+        firstCellText={data.firstCellText}
+        secondCellTitle={data.secondCellTitle}
+        secondCellText={data.secondCellText}
+        thirdCellTitle={data.thirdCellTitle}
+        thirdCellText={data.thirdCellText}
+        sliderData={data.sliderData}
+      />
     )
     case "Developments": return (
       <Developments
@@ -85,27 +91,27 @@ export function setMainModule(moduleName, data) {
         en
       />
     )
-    case "Inputs": return (
-      <div className={style.white}>
-        <Inputs
-          image={data.image}
-          objectFit={data.objectFit}
-          title={data.title}
-          text={data.text}
-          buttonText={data.buttonText}
-          en
-        />
-      </div>
-    )
-    case "NewsBlock": return (
-      <div className="margins20">
-        <NewsBlock
-          en
-          title={data.title}
-          readMoreButtonText={data.readMoreButtonText}
-          data={data.data}
-        />
-      </div>
-    )
+    // case "Inputs": return (
+    //   <div className={style.white}>
+    //     <Inputs
+    //       image={data.image}
+    //       objectFit={data.objectFit}
+    //       title={data.title}
+    //       text={data.text}
+    //       buttonText={data.buttonText}
+    //       en
+    //     />
+    //   </div>
+    // )
+    // case "NewsBlock": return (
+    //   <div className="margins20">
+    //     <NewsBlock
+    //       en
+    //       title={data.title}
+    //       readMoreButtonText={data.readMoreButtonText}
+    //       data={data.data}
+    //     />
+    //   </div>
+    // )
   }
 }

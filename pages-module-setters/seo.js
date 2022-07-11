@@ -21,7 +21,6 @@ export function setSeoModule(moduleName, data) {
     )
     case "SeoCTA": return (
       <SeoCTA
-        catalog={data.catalog}
         theme={data.theme}
         logoName={data.logoName}
         textTop={data.textTop}

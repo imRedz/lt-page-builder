@@ -55,10 +55,10 @@ export function setCardsModule(moduleName, data) {
           link={data.link}
           title={data.title}
           style={data.theme}
-          bgDesktop={data.image_desktop}
-          bgResponsive={data.image_responsive}
-          height="595px"
+          bg={data.image}
+          height="475px"
           buttonText={data.buttonText}
+          color={data.color}
         />
       </div>
     )
@@ -68,9 +68,8 @@ export function setCardsModule(moduleName, data) {
           link={data.link}
           title={data.title}
           style={data.theme}
-          bgDesktop={data.image_desktop}
-          bgResponsive={data.image_responsive}
-          height="595px"
+          bg={data.image}
+          height="470px"
           buttonText={data.buttonText}
         />
       </div>
@@ -85,6 +84,7 @@ export function setCardsModule(moduleName, data) {
           contain
           containTwo
           objectPosition={data.objectPosition}
+          objectPositionTwo={data.objectPosition_2}
           bgColor={data.bgColor}
           bgColorTwo={data.bgColor_2}
           title={data.title}
@@ -92,6 +92,7 @@ export function setCardsModule(moduleName, data) {
           titleTwo={data.title_2}
           styleSecond={data.theme_2}
           buttonText={data.buttonText}
+          buttonText_2={data.buttonText_2}
         />
       </div>
     )
@@ -105,6 +106,7 @@ export function setCardsModule(moduleName, data) {
           contain
           containTwo
           objectPosition={data.objectPosition}
+          objectPositionTwo={data.objectPosition_2}
           bgColor={data.bgColor}
           bgColorTwo={data.bgColor_2}
           title={data.title}
@@ -112,6 +114,7 @@ export function setCardsModule(moduleName, data) {
           titleTwo={data.title_2}
           styleSecond={data.theme_2}
           buttonText={data.buttonText}
+          buttonText_2={data.buttonText_2}
         />
       </div>
     )
@@ -125,6 +128,7 @@ export function setCardsModule(moduleName, data) {
           contain
           containTwo
           objectPosition={data.objectPosition}
+          objectPositionTwo={data.objectPosition_2}
           bgColor={data.bgColor}
           bgColorTwo={data.bgColor_2}
           title={data.title}
@@ -132,6 +136,7 @@ export function setCardsModule(moduleName, data) {
           titleTwo={data.title_2}
           styleSecond={data.theme_2}
           buttonText={data.buttonText}
+          buttonText_2={data.buttonText_2}
         />
       </div>
     )

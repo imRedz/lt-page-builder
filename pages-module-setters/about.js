@@ -1,13 +1,23 @@
-export function setMainModule(moduleName, data) {
+import Main from "../../lt-lands-modules/About/Main"
+import Road from "../../lt-lands-modules/About/Road"
+import Leaders from "../../lt-lands-modules/About/Leaders"
+import Trust from "../../lt-lands-modules/About/Trust"
+import Development from "../../lt-lands-modules/About/Development"
+import Final from "../../lt-lands-modules/About/Final"
+import { nanoid } from 'nanoid'
+
+export function setAboutCompanyModule(moduleName, data) {
   switch (moduleName) {
-    case "Main": return (
+    case "main": return (
       <Main
+        key={nanoid()}
         title={data.title}
         text={data.text}
       />
     )
     case "Road": return (
       <Road
+        key={nanoid()}
         text={data.text}
         sliderData={data.sliderData}
         title={data.title}
@@ -25,6 +35,7 @@ export function setMainModule(moduleName, data) {
     )
     case "Leaders": return (
       <Leaders
+        key={nanoid()}
         title={data.title}
         slidesToShow={data.slidesToShow}
         sliderData={data.sliderData}
@@ -46,6 +57,7 @@ export function setMainModule(moduleName, data) {
     )
     case "Trust": return (
       <Trust
+        key={nanoid()}
         title={data.title}
         text={data.text}
         sliderData={data.sliderData}
@@ -54,6 +66,7 @@ export function setMainModule(moduleName, data) {
     )
     case "Development": return (
       <Development
+        key={nanoid()}
         title={data.title}
         subtitleFirst={data.subtitleFirst}
         textFirst={data.textFirst}
@@ -69,6 +82,7 @@ export function setMainModule(moduleName, data) {
     )
     case "Final": return (
       <Final
+        key={nanoid()}
         title={data.title}
         text={data.text}
         textTwoRes={data.textTwoRes}

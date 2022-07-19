@@ -1,4 +1,4 @@
-export function setMainModule(moduleName, data) {
+export function setKeyAdvantagesModule(moduleName, data) {
   switch (moduleName) {
     case "Main": return (
       <Main

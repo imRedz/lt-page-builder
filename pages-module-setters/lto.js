@@ -1,6 +1,14 @@
-export function setMainModule(moduleName, data) {
+import FirstCards from "../../lt-lands-modules/LTO/FirstCards"
+import Images from "../../lt-lands-modules/LTO/Images"
+import LongSlider from "../../lt-lands-modules/LTO/LongSlider"
+import Main from "../../lt-lands-modules/LTO/Main"
+import SecondCards from "../../lt-lands-modules/LTO/SecondCards"
+import Statistics from "../../lt-lands-modules/LTO/Statistics"
+import ThirdCards from "../../lt-lands-modules/LTO/ThirdCards"
+
+export function setLTOModule(moduleName, data) {
   switch (moduleName) {
-    case "": return (
+    case "Main": return (
       <Main
         breadcrumbData={data.breadcrumbData}
         title={data.title}
@@ -8,7 +16,7 @@ export function setMainModule(moduleName, data) {
         phoneImage={data.phoneImage}
       />
     )
-    case "": return (
+    case "FirstCards": return (
       <FirstCards
         title={data.title}
         firstImage={data.firstImage}
@@ -27,7 +35,7 @@ export function setMainModule(moduleName, data) {
         cardThreeText={data.cardThreeText}
       />
     )
-    case "": return (
+    case "SecondCards": return (
       <SecondCards
         title={data.title}
         firstImage={data.firstImage}
@@ -38,7 +46,7 @@ export function setMainModule(moduleName, data) {
         cardTwoText={data.cardTwoText}
       />
     )
-    case "": return (
+    case "LongSlider": return (
       <LongSlider
         title={data.title}
         text={data.text}
@@ -48,7 +56,7 @@ export function setMainModule(moduleName, data) {
         dataOutdoor={data.dataOutdoor}
       />
     )
-    case "": return (
+    case "ThirdCards": return (
       <ThirdCards
         title={data.title}
         cardTitle={data.cardTitle}
@@ -78,7 +86,7 @@ export function setMainModule(moduleName, data) {
         cardThreeText={data.cardThreeText}
       />
     )
-    case "": return (
+    case "Images": return (
       <Images
         firstImage={data.firstImage}
         secondImage={data.secondImage}
@@ -87,35 +95,16 @@ export function setMainModule(moduleName, data) {
         fivthImage={data.fivthImage}
       />
     )
-    case "": return (<>
-      {/* // <div className={style.statistics}>
-  //   <section>
-  //     <h2 className={style.lo__title}>
-  //       <span>3 ways</span>
-  //       <br />
-  //       to provide{" "}
-  //       <span>statistics</span>
-  //     </h2>
-  //     <p className="paragraph">
-  //       After the session, you can provide personal statistics of players with achievements in a format convenient for you.
-  //     </p>
-  //   </section>
-  //   <SliderThreeButtons
-  //     sliderData=
-  //     listofTitles=
-  //   />
-  //   <div className={style.footer_buttons}>
-  //     <FooterButtons
-  //       en
-  //       theme=
-  //       logoName=
-  //       textTop=
-  //       textBottom=
-  //       buttonText=
-  //     />
-  //   </div>
-  // </div> */}
-    </>
+    case "Statistics": return (
+      <Statistics
+        title={data.title}
+        text={data.text}
+        sliderData={data.sliderData}
+        listofTitles={data.listofTitles}
+        footer_buttons_textTop={data.footer_buttons_textTop}
+        footer_buttons_textBottom={data.footer_buttons_textBottom}
+        footer_buttons_buttonText={data.footer_buttons_buttonText}
+      />
     )
 
   }

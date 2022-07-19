@@ -1,3 +1,7 @@
+import BlogHeader from "../../blogModules/BlogHeader"
+import BlogParagraph from "../../blogModules/BlogParagraph"
+import BlogTitle from "../../blogModules/BlogTitle"
+
 export function setBlogModule(moduleName, data) {
   switch (moduleName) {
     case "BlogHeader": return (

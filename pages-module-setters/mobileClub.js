@@ -1,14 +1,36 @@
-import AllFor from "../../modules/LandModules/MobileClub/AllFor"
-import BusinessSupport from "../../modules/LandModules/MobileClub/BusinessSupport"
-import FAQ from "../../modules/LandModules/MobileClub/FAQ"
-import HowWorks from "../../modules/LandModules/MobileClub/HowWorks"
-import Main from "../../modules/LandModules/MobileClub/Main"
-import MobileDecision from "../../modules/LandModules/MobileClub/MobileDecision"
-import Profit from "../../modules/LandModules/MobileClub/Profit"
-import WhatIs from "../../modules/LandModules/MobileClub/WhatIs"
+import AllFor from "../../lt-lands-modules/MobileClub/AllFor"
+import BusinessSupport from "../../lt-lands-modules/MobileClub/BusinessSupport"
+import FAQ from "../../lt-lands-modules/MobileClub/FAQ"
+import HowWorks from "../../lt-lands-modules/MobileClub/HowWorks"
+import Main from "../../lt-lands-modules/MobileClub/Main"
+import MobileDecision from "../../lt-lands-modules/MobileClub/MobileDecision"
+import Profit from "../../lt-lands-modules/MobileClub/Profit"
+import WhatIs from "../../lt-lands-modules/MobileClub/WhatIs"
+import Form from "../../lt-lands-modules/MobileClub/Form";
 
 export function setMobileClubModule(moduleName, data) {
   switch (moduleName) {
+    case "Main": return (
+      <Main
+        title={data.title}
+        buttonText={data.buttonText}
+      />
+    )
+    case "WhatIs": return (
+      <WhatIs
+        videoLink={data.videoLink}
+        title={data.title}
+        text={data.text}
+      />
+    )
+    case "HowWorks": return (
+      <HowWorks
+        videoLink={data.videoLink}
+        data={data.data}
+        title={data.title}
+        buttonText={data.buttonText}
+      />
+    )
     case "AllFor": return (
       <AllFor
         title={data.title}
@@ -23,7 +45,27 @@ export function setMobileClubModule(moduleName, data) {
         cell4Title={data.cell4Title}
         cell4Text={data.cell4Text}
         buttonText={data.buttonText}
-        en
+      />
+    )
+    case "Profit": return (
+      <Profit
+        title={data.height}
+        cell1Title={data.cell1Title}
+        cell1Text={data.cell1Text}
+        cell2Title={data.cell2Title}
+        cell2Text={data.cell2Text}
+        cell3Title={data.cell3Title}
+        cell3Text={data.cell3Text}
+        cell4Title={data.cell4Title}
+        cell4Text={data.cell4Text}
+      />
+    )
+    case "MobileDecision": return (
+      <MobileDecision
+        title={data.title}
+        data={data.data}
+        width={data.width}
+        height={data.height}
       />
     )
     case "BusinessSupport": return (
@@ -49,56 +91,20 @@ export function setMobileClubModule(moduleName, data) {
         formTitle={data.formTitle}
         formSubTitle={data.formSubTitle}
         formButtonText={data.formButtonText}
-        en
-      />
-    )
-    case "Main": return (
-      <Main
-        title={data.title}
-        buttonText={data.buttonText}
-        formSubtitle={data.formSubtitle}
-        en
       />
     )
     case "FAQ": return (
-      <FAQ data={data} />
+      <FAQ data={data.data} />
     )
-    case "HowWorks": return (
-      <HowWorks
-        videoLink={data.videoLink}
-        data={data.data}
-        title={data.title}
-        buttonText={data.buttonText}
-        en
-      />
-    )
-    case "MobileDecision": return (
-      <MobileDecision
-        title={data.title}
-        data={data.data}
-        width={data.width}
-        height={data.height}
-      />
-    )
-    case "Profit": return (
-      <Profit
-        title={data.height}
-        cell1Title={data.cell1Title}
-        cell1Text={data.cell1Text}
-        cell2Title={data.cell2Title}
-        cell2Text={data.cell2Text}
-        cell3Title={data.cell3Title}
-        cell3Text={data.cell3Text}
-        cell4Title={data.cell4Title}
-        cell4Text={data.cell4Text}
-      />
-    )
-    case "WhatIs": return (
-      <WhatIs
-        en
-        videoLink={data.videoLink}
+    case "Form": return (
+      <Form
+        id={data.id}
+        theme={data.theme}
+        image={data.image}
+        objectFit={data.objectFit}
         title={data.title}
         text={data.text}
+        buttonText={data.buttonText}
       />
     )
   }

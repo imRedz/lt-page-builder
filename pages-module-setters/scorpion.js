@@ -1,14 +1,23 @@
-export function setMainModule(moduleName, data) {
+import ChooseConfig from "../../lt-lands-modules/Scorpion/ChooseConfig"
+import FiveModes from "../../lt-lands-modules/Scorpion/FiveModes"
+import HowItWorks from "../../lt-lands-modules/Scorpion/HowItWorks"
+import ScorpionMain from "../../lt-lands-modules/Scorpion/Main"
+import Safety from "../../lt-lands-modules/Scorpion/Safety"
+import Shockfight from "../../lt-lands-modules/Scorpion/Shockfight"
+import ScorpionVideo from "../../lt-lands-modules/Scorpion/Video"
+import { FooterButtons } from "../../lt-modules/FooterButtons"
+
+export function setScorpionModule(moduleName, data) {
   switch (moduleName) {
     case "Main": return (
-      <Main
+      <ScorpionMain
         title={data.title}
         text={data.text}
         buttonText={data.buttonText}
       />
     )
     case "Video": return (
-      <Video
+      <ScorpionVideo
         videoLink={data.videoLink}
       />
     )

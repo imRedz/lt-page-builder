@@ -1,4 +1,17 @@
-export function setMainModule(moduleName, data) {
+import ActiveExploit from "../../lt-lands-modules/HeadBand/ActiveExploit"
+import BlastWave from "../../lt-lands-modules/HeadBand/BlastWave"
+import Collaps from "../../lt-lands-modules/HeadBand/Collaps"
+import Columns from "../../lt-lands-modules/HeadBand/Columns"
+import Control from "../../lt-lands-modules/HeadBand/Control"
+import Image from "../../lt-lands-modules/HeadBand/Image"
+import Indication from "../../lt-lands-modules/HeadBand/Indication"
+import Main from "../../lt-lands-modules/HeadBand/Main"
+import Modes from "../../lt-lands-modules/HeadBand/Modes"
+import TimeOfDay from "../../lt-lands-modules/HeadBand/TimeOfDay"
+import Video from "../../lt-lands-modules/HeadBand/Video"
+import Gallery from "../../lt-lands-modules/Gallery"
+
+export function setHeadBandModule(moduleName, data) {
   switch (moduleName) {
     case "Main": return (
       <Main

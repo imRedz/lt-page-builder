@@ -1,4 +1,13 @@
-export function setMainModule(moduleName, data) {
+import Features from "../../lt-lands-modules/Lux/Features"
+import FeaturesSlider from "../../lt-lands-modules/Lux/FeaturesSlider"
+import Form from "../../lt-lands-modules/Lux/Form"
+import Main from "../../lt-lands-modules/Lux/Main"
+import NetronicFeatures from "../../lt-lands-modules/Lux/NetronicFeatures"
+import Set from "../../lt-lands-modules/Lux/Set"
+import Shockproof from "../../lt-lands-modules/Lux/Shockproof"
+import Tagers from "../../lt-lands-modules/Lux/Tagers"
+
+export function setLuxModule(moduleName, data) {
   switch (moduleName) {
     case "Main": return (
       <Main
@@ -24,21 +33,18 @@ export function setMainModule(moduleName, data) {
     )
     case "FeaturesSlider": return (
       <FeaturesSlider
-        en
         title={data.title}
+        data={data.sliderData}
       />
     )
     case "InputsWName": return (
-      <div className={style.static_form}>
-        <InputsWName
-          image={data.image}
-          objectFit={data.objectFit}
-          title={data.title}
-          text={data.text}
-          buttonText={data.buttonText}
-          en
-        />
-      </div>
+      <Form
+        image={data.image}
+        objectFit={data.objectFit}
+        title={data.title}
+        text={data.text}
+        buttonText={data.buttonText}
+      />
     )
     case "Shockproof": return (
       <Shockproof
@@ -51,6 +57,7 @@ export function setMainModule(moduleName, data) {
     )
     case "Set": return (
       <Set
+        data={data.sliderData}
         tabTitleOne={data.tabTitleOne}
         tabTitleTwo={data.tabTitleTwo}
         tabTitleThree={data.tabTitleThree}

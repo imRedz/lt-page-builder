@@ -1,3 +1,16 @@
+import Main from "../../lt-lands-modules/Falcon/Main"
+import Features from "../../lt-lands-modules/Falcon/Features"
+import Modifications from "../../lt-lands-modules/Falcon/Modifications"
+import Exploit from "../../lt-lands-modules/Falcon/Exploit"
+import Impulse from "../../lt-lands-modules/Falcon/Impulse"
+import Display from "../../lt-lands-modules/Falcon/Display"
+import TenInOne from "../../lt-lands-modules/Falcon/TenInOne"
+import Сamouflage from "../../lt-lands-modules/Falcon/Сamouflage"
+import SafetySensors from "../../lt-lands-modules/Falcon/SafetySensors"
+import RemotePowerOff from "../../lt-lands-modules/Falcon/RemotePowerOff"
+import ModsTable from "../../lt-lands-modules/Falcon/ModsTable"
+import InDetails from "../../lt-lands-modules/Falcon/InDetails"
+
 export function setFalconModule(moduleName, data) {
   switch (moduleName) {
     case "Main": return (
@@ -98,14 +111,10 @@ export function setFalconModule(moduleName, data) {
       />
     )
     case "SliderCards": return (
-      <div
-        className={style.toWatchSlider}
-      >
-        <Fade direction="up" triggerOnce>
-          <h2 className={style.h2}>{data.title}</h2>
-        </Fade>
-        <SliderCards sliderData={data.data} />
-      </div>
+      <InDetails
+        title={data.title}
+        data={data.data}
+      />
     )
   }
 }

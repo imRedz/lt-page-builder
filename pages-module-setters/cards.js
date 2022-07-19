@@ -42,6 +42,7 @@ export function setCardsModule(moduleName, data) {
           link={data.link}
           title={data.title}
           style={data.theme}
+          bg={data.image}
           bgDesktop={data.image_desktop}
           bgResponsive={data.image_responsive}
           height="595px"
